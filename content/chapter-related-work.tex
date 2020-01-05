@@ -1,5 +1,3 @@
-% !TEX root = ../thesis-example.tex
-%
 \chapter{Related work}
 \label{chapter2}
 
@@ -55,10 +53,28 @@ MonkeyTalk is a record and replay open source mobile app automation tool. It is 
 \subsection {Quantum}
 The Quantum framework allows you to build BDD automated tests using cucumber. It supports both iOS and Android. Tests are written in Java.
 
-\section{Comparison Table}
-In the following table you will be able to visualize a comparison between the main characteristics of the previously mentioned tools. Further on, the study case will provide even more specific information about a few of these tools.
+\section{Classification}
+After all this research, it is possible to classify these tools in groups from a high level standpoint.
 
-\includegraphics[width=12cm]{img/table1.png} \\[2mm]
+1. First-party: Here we have the well known XCTestUI which is easy to setup, reliable to use and requires a moderate amount of experience to work with. The main downside is, it does not provide any compatibility with other mobile operating systems like Android.
+
+2. XCTest based: These act as libraries that provide some extra features besides what XCTestUI has to provide. Tools in this group include EarlGrey and KIF.
+
+3. Third Party: Third party tools like Appium, will require the most experience to work on but provide great flexibility and interoperability.
+
+4. All-in-one paid:  These are the easiest to use but generally require paid license to use. Tools in this group include TestComplete and Ranorex.
+
+\section{Comparison Table}
+
+In the following table [Fig 2.1] you will be able to visualize a comparison between the main characteristics of the previously mentioned tools. Further on, the study case will provide even more specific information about a few of these tools.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=12cm]{img/table1.png} \\[0mm]
+	\vspace{0cm}
+	\caption{General tool comparison table}
+	\label{Toolcomparison}
+\end{figure} 
 
 \section{Categories}
 In order to compare test automation tools, it is important to understand the different elements, interactions and functionality an iOS mobile app utilizes. These will be broken down in three categories: GUI components, Gestures and Testing Capabilities. The first makes reference to the all the elements that make up the graphical user interface, these are also divided into three categories: Bars, Views and Controls. Gestures are the way users interact with the touchscreen, this is the main way users provide input to their mobile devices. Finally, testing capabilities make reference to the various APIs the test automation tool could provide in order to manipulate the application OS and hardware configurations.
