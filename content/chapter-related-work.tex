@@ -7,19 +7,20 @@ As for mobile systems, there are only two main platforms: Android and iOS. On th
 
 There are currently a few tools that allow the development of automated user interface tests for iOS. The feasibility of developing tests through one or the other varies depending on the compatibility of the tool with the characteristics of the project. This refers to factors such as: project budget, programming languages with which the team to perform the automation is familiar with, whether the application is hybrid or native, testing load and speed requirements, among many others.
 
-The two types of tools used to create user interface automated tests are: automation APIs/frameworks and record and replay tools \cite{Linares-Vasquez2017ContinuousTesting}. Both types of tools are within the scope of this project. It is also worth noting that there are several other test support tools like: bug and error reporting/monitoring tools, device streaming tools and automated test input generation tools. It is important understand, at a high level, how these two tool types work and how they are used to create automated tests.
+The two types of tools used to create user interface automated tests are: automation APIs/frameworks and record and replay tools \cite{Linares-Vasquez2017ContinuousTesting}. Both types are within the scope of this project. It is also worth noting that there are several other test support tools like: bug and error reporting/monitoring tools, device streaming tools and automated test input generation tools. It is important understand, at a high level, how these two tool types work and how they are used to create automated tests.
 
 They both attempt attempt to provide an interface for the user to create an automated test. Which is why, in some cases, test automation frameworks provide both types. Even though the goal is the same, the way the actual automated test is created is where they differ. On the one hand, automation APIs/frameworks require a manually written test script which contains all of the code that makes up the automated test. On the other hand, record and replay tools only require for the test to be manually executed and the tool itself will record all the interactions that where performed, automatically generating the automated test.
 
 Once the automated test is executed, it must be capable of interacting with the smartphones GUI elements as a real user would, replicating the test case scenarios. This includes performing GUI interactions such as: swiping, tapping, dragging, pinching, among others.
 
+
 \section{Test Automation Tools}
 
-Regarding the available tools, there are several different tools that can be used to develop your automated tests, ranging from paid license all-in-one tools like Ranorex \cite{Ranorex} to open source client-server tools like Appium \cite{Appium}. 
+Regarding the available tools, there are several different tools that can be used to develop automated tests, ranging from paid license all-in-one tools like Ranorex \cite{Ranorex} to open source client-server tools like Appium \cite{Appium}. 
 
-Getting to know all of the available tools, how they work and how they are used can become a very time-consuming task. Besides, while doing research about test automation tools for iOS, you might end up with a small list of the available tools and a brief understanding of them. The actual documentation you can find on automation tools for iOS is very limited and as a result you can easily have a hard time trying to choose the appropriate tool for your project. For this reason, this project pursues to reduce the conceptual gap present when trying to learn about the available user interface test automation tools for iOS.
+Getting to know all of the available tools, how they work and how they are used can become a very time-consuming task. Besides, when performing research about test automation tools for iOS, you generally find a small list of tools with a brief description. It turns out, the actual information you can find on automation tools for iOS is very limited and as a result you can easily have a hard time trying to choose the appropriate tool for your project. As a consequence, this project pursues to reduce the conceptual gap present when trying to select the most appropriate user interface test automation tool for iOS.
 
-Here, a list and a brief description for most of the currently available tools that may perform test automation of UI over the iOS platform is shown. This will provide a high level view of what is available and may help you discard some options right away.
+Here, a list and a brief description with the most relevant and currently available tools that perform user interface test automation over the iOS platform is shown. This will provide a high level view on what is available and may help you discard some options right away.
 
 \subsection {XCUITest}
 Xcode comes with the testing framework XCTest. This testing framework will not only allow you to code your unit tests, but you may also record and write UI tests. This testing tool has seen a mayor upgrades since it was released a few years ago and has now become a really solid option. \cite{XCUITest}
@@ -52,7 +53,7 @@ MonkeyTalk is a record and replay open source mobile app automation tool. It des
 The Quantum framework allows you to build BDD automated tests using cucumber. It supports both iOS and Android. Tests are written in Java. \cite{Quantum}
 
 \section{Classification}
-After all this research, it is possible to classify these tools in groups from a high level standpoint.
+Conveniently, it is possible to classify these tools in groups from a high-level standpoint:
 
 1. First-party: Here we have the well known XCTestUI which is easy to setup, reliable to use and requires a moderate amount of experience to work with. The main downside is, it does not provide any compatibility with other mobile operating systems like Android.
 
@@ -60,11 +61,11 @@ After all this research, it is possible to classify these tools in groups from a
 
 3. Third Party: Third party tools like Appium, will require the most experience to work on but provide great flexibility and interoperability.
 
-4. All-in-one paid:  These are the easiest to use but generally require paid license to use. Tools in this group include TestComplete and Ranorex.
+4. All-in-one paid:  These are usually the easiest to use but generally require paid license to use. Tools in this group include TestComplete and Ranorex.
 
 \section{Comparison Table}
 
-In the following table [Fig 2.1] you will be able to visualize a comparison between the main characteristics of the previously mentioned tools. Further on, the study case will provide even more specific information about a few of these tools.
+In the following table, you will be able to visualize a comparison between the main characteristics of the previously mentioned tools. Further on, the study case will provide even more specific information about a few of these tools.
 
 \begin{figure}[h!]
 	\centering
@@ -75,9 +76,9 @@ In the following table [Fig 2.1] you will be able to visualize a comparison betw
 \end{figure} 
 
 \section{Categories}
-In order to compare test automation tools, it is important to understand the different elements, interactions and functionality an iOS mobile app utilizes. These will be broken down in three categories: GUI components, Gestures and Testing Capabilities. The first makes reference to the all the elements that make up the graphical user interface, these are also divided into three categories: Bars, Views and Controls. Gestures are the way users interact with the touchscreen, this is the main way users provide input to their mobile devices. Finally, testing capabilities make reference to the various APIs the test automation tool could provide in order to manipulate the application OS and hardware configurations.
+In order to compare these test automation tools, it is important to understand the different elements, interactions and functionality a mobile application utilizes. These will be broken down in three categories: GUI components, Gestures and Testing Capabilities. The first makes reference to the all the elements that make up the graphical user interface, which can be divided into three categories: Bars, Views and Controls. Gestures are the main way users provide input to their mobile devices. Finally, testing capabilities make reference to the various APIs the test automation tool could provide in order to manipulate GUI elements, operating system and hardware configurations.
 
-The following is a list of GUI components and gestures Apple has publicly defined \cite{AppleHumanInterface}, as well as some of the testing capabilities that one may need while automating tests. 
+The following is a list of GUI components and gestures \cite{AppleHumanInterface}, as well as some of the testing capabilities that one may need while automating tests.
 
 \subsection {GUI Components}
 	
@@ -156,7 +157,7 @@ The following is a list of GUI components and gestures Apple has publicly define
 	
 \subsection {Automation Tool Characteristics and Features}
 
-Another important aspect to take into account when evaluating the suitability of a framework for a project is the characteristics and features the tool provides. There are certain characteristics or features besides the automated testing itself that may become invaluable. 
+Another important aspect to take into account when evaluating the suitability of a test automation tool for a project is the characteristics and features provided by the framework. Some of these may become invaluable depending on the project. 
 
 Examples for such are: 
 	\begin{itemize}
